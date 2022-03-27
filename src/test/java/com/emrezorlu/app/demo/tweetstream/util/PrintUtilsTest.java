@@ -1,7 +1,10 @@
 package com.emrezorlu.app.demo.tweetstream.util;
 
 import static com.emrezorlu.app.demo.tweetstream.common.utils.PrintUtils.printUserAndMessages;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.atMostOnce;
+import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.ArrayList;
@@ -37,10 +40,11 @@ public class PrintUtilsTest extends AbstractServiceTest {
 		Author auth = TwitterTestUtil.getAuthor();
 		TwitterTestUtil.getMessage();
 		when(modelMapper.map(ArgumentMatchers.any(User.class), any())).thenReturn(auth);
-		// TODOD burada modelmapper sapıtıyor
 		when(status.getUser()).thenReturn(user);
 		when(modelMapper.map(ArgumentMatchers.any(User.class), any())).thenReturn(auth);
 		printUserAndMessages(user, statusList);
+		verify(status, atMostOnce()).getUser();
+		assertNotNull(auth);
 	}
 
 }

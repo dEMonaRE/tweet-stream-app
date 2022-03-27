@@ -1,5 +1,7 @@
 package com.emrezorlu.app.demo.tweetstream.util;
 
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Stream;
@@ -32,5 +34,6 @@ class TweetsProcessorTest {
 	void whenExecute_thenDoNothing() {
 		List<Status> tweets = TwitterTestUtil.getQueryResult().getTweets();
 		tweetsProcessor.execute((tweets));
+		assertNotNull(tweets);
 	}
 }

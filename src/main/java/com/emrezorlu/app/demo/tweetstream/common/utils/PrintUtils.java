@@ -11,14 +11,16 @@ import org.modelmapper.ModelMapper;
 import com.emrezorlu.app.demo.tweetstream.message.datamodel.Author;
 import com.emrezorlu.app.demo.tweetstream.message.datamodel.Message;
 
-import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import twitter4j.Status;
 import twitter4j.User;
 
 @Slf4j
-@NoArgsConstructor
 public class PrintUtils {
+
+	private PrintUtils() {
+	}
+
 	private static final ZoneId zone = ZoneId.of("GMT+3");
 
 	public static LocalDateTime convertToLocalDateTime(Long timestamp) {

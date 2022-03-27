@@ -152,7 +152,7 @@ public class MessageServiceImpl implements MessageService {
 		List<StatisticEntity> entities = statisticRepository.findByCreateDateBetween(from, to);
 
 		if (CollectionUtils.isEmpty(entities)) {
-			throw new BusinessException(String.format("No Transactions Found from {} to {}", from, to),
+			throw new BusinessException(String.format("No Transactions Found from %s to %s", from, to),
 					ErrorCode.NO_TRANSACTIONS_FOR_PERIOD);
 		}
 
