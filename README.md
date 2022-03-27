@@ -1,5 +1,5 @@
 ![example workflow](https://github.com/dEMonaRE/tweet-stream-app/actions/workflows/maven-publish.yml/badge.svg)
-
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=dEMonaRE_tweet-stream-app&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=dEMonaRE_tweet-stream-app)
 
 **TECH STACK**
 -  **Java 11**
