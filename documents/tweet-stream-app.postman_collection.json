@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "b569f79e-6aa8-4bf5-9c2f-81393b83bf2d",
+		"name": "tweet-stream-app",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getTweets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/message/getTweets",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"getTweets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getTweets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/message/getTweets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"message",
+								"getTweets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Mar 2022 21:02:41 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"623a3971a1c99935c2ed8657\",\n        \"keyword\": \"emrezorlu\",\n        \"createDate\": \"2022-03-23T00:02:41.2114928\",\n        \"tweetSize\": 0,\n        \"durationInSeconds\": 30,\n        \"tweetPerSeconds\": 0\n    },\n    \"httpStatus\": \"OK\"\n}"
+				},
+				{
+					"name": "example2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/message/getTweets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"message",
+								"getTweets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Mar 2022 21:05:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"623a39e1711490206eb56173\",\n        \"keyword\": \"sytac\",\n        \"createDate\": \"2022-03-23T00:04:33.8230995\",\n        \"tweetSize\": 110,\n        \"durationInSeconds\": 3,\n        \"tweetPerSeconds\": 36\n    },\n    \"httpStatus\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Stream Tweets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/message/startStream?keyword=galatasaray",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"startStream"
+					],
+					"query": [
+						{
+							"key": "keyword",
+							"value": "galatasaray"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "New Request",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/message/startStream?keyword=galatasaray",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"message",
+								"startStream"
+							],
+							"query": [
+								{
+									"key": "keyword",
+									"value": "galatasaray"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Mar 2022 21:08:53 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": \"623a3ad9711490206eb56175\",\n        \"keyword\": \"galatasaray\",\n        \"createDate\": \"2022-03-23T00:08:41.8944366\",\n        \"tweetSize\": 16,\n        \"durationInSeconds\": 30.0128643,\n        \"tweetPerSeconds\": 0.5331047326929073\n    },\n    \"httpStatus\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getSummary Report",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/message/getSummary",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"getSummary"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "getSummary Report",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/message/getSummary",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"message",
+								"getSummary"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Mar 2022 21:43:10 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"totalRuns\": 30,\n        \"totalTweetSize\": 2892,\n        \"averageTweetSize\": 96.4,\n        \"averageDurationInSeconds\": 11.334919666666668,\n        \"totalDurationInSeconds\": 340.04759,\n        \"averageTweetPerSeconds\": 61.859984671033764,\n        \"keywordOccurrences\": {\n            \"emrezorlu\": 1,\n            \"bieber\": 8,\n            \"galatasaray\": 2,\n            \"oasdtasdjh123\": 3,\n            \"emre\": 4,\n            \"Galatasaray\": 6,\n            \"sytac\": 6\n        }\n    },\n    \"httpStatus\": \"OK\"\n}"
+				}
+			]
+		},
+		{
+			"name": "getStatistics by Interval",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": [
+				{
+					"name": "getStatistics by Interval",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/message/getStatisticsByInterval?from=2022-03-19T00%3A00%3A00.000-01%3A00&to=2022-03-24T00%3A00%3A00.000-01%3A00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"message",
+								"getStatisticsByInterval"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2022-03-19T00%3A00%3A00.000-01%3A00"
+								},
+								{
+									"key": "to",
+									"value": "2022-03-24T00%3A00%3A00.000-01%3A00"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "1; mode=block"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 22 Mar 2022 22:00:52 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"resultList\": [\n            {\n                \"id\": \"6237ad95fecebe3cd9849a97\",\n                \"keyword\": \"emre\",\n                \"createDate\": \"2022-03-21T01:41:25.912\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 2,\n                \"tweetPerSeconds\": 100\n            },\n            {\n                \"id\": \"6237adfffecebe3cd9849a98\",\n                \"keyword\": \"emre\",\n                \"createDate\": \"2022-03-21T01:43:11.493\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 2,\n                \"tweetPerSeconds\": 100\n            },\n            {\n                \"id\": \"6237ae1afecebe3cd9849a99\",\n                \"keyword\": \"emre\",\n                \"createDate\": \"2022-03-21T01:43:38.292\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 200\n            },\n            {\n                \"id\": \"6237ae3e8fb59705fcec44ef\",\n                \"keyword\": \"sytac\",\n                \"createDate\": \"2022-03-21T01:44:14.466\",\n                \"tweetSize\": 8,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 8\n            },\n            {\n                \"id\": \"6237aeedc2be94365dcc164f\",\n                \"keyword\": \"sytac\",\n                \"createDate\": \"2022-03-21T01:47:09.947\",\n                \"tweetSize\": 8,\n                \"durationInSeconds\": 16,\n                \"tweetPerSeconds\": 0\n            },\n            {\n                \"id\": \"6237af5b8bc3253448c2deed\",\n                \"keyword\": \"sytac\",\n                \"createDate\": \"2022-03-21T01:48:59.851\",\n                \"tweetSize\": 8,\n                \"durationInSeconds\": 11,\n                \"tweetPerSeconds\": 0\n            },\n            {\n                \"id\": \"6237afa08bc3253448c2deee\",\n                \"keyword\": \"sytac\",\n                \"createDate\": \"2022-03-21T01:50:08.335\",\n                \"tweetSize\": 8,\n                \"durationInSeconds\": 5,\n                \"tweetPerSeconds\": 1\n            },\n            {\n                \"id\": \"6237afdb8bc3253448c2deef\",\n                \"keyword\": \"sytac\",\n                \"createDate\": \"2022-03-21T01:51:07.138\",\n                \"tweetSize\": 104,\n                \"durationInSeconds\": 8,\n                \"tweetPerSeconds\": 13\n            },\n            {\n                \"id\": \"6237b011f357e00fb09af42e\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-21T01:52:01.643\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 2,\n                \"tweetPerSeconds\": 100\n            },\n            {\n                \"id\": \"6237b152f357e00fb09af42f\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-21T01:57:22.587\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 2,\n                \"tweetPerSeconds\": 100\n            },\n            {\n                \"id\": \"6237b3ae05957a6b1b627cb7\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-21T02:07:26.403\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 200\n            },\n            {\n                \"id\": \"6238be78d8714773c9bf4d77\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-21T21:05:44.74\",\n                \"tweetSize\": 0,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 0\n            },\n            {\n                \"id\": \"6238c184b2b58d498912b029\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-21T21:18:44.913\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 2,\n                \"tweetPerSeconds\": 100\n            },\n            {\n                \"id\": \"6238c8343829bd515ce6a0d4\",\n                \"keyword\": \"oasdtasdjh123\",\n                \"createDate\": \"2022-03-21T21:47:16.021\",\n                \"tweetSize\": 0,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 0\n            },\n            {\n                \"id\": \"6238c8c22343ae242098c2e1\",\n                \"keyword\": \"oasdtasdjh123\",\n                \"createDate\": \"2022-03-21T21:49:38.18\",\n                \"tweetSize\": 0,\n                \"durationInSeconds\": 31,\n                \"tweetPerSeconds\": 0\n            },\n            {\n                \"id\": \"6238ccda2343ae242098c2e2\",\n                \"keyword\": \"oasdtasdjh123\",\n                \"createDate\": \"2022-03-21T22:07:06.057\",\n                \"tweetSize\": 0,\n                \"durationInSeconds\": 31,\n                \"tweetPerSeconds\": 0\n            },\n            {\n                \"id\": \"6238ccedd826e8770f1880f1\",\n                \"keyword\": \"Galatasaray\",\n                \"createDate\": \"2022-03-21T22:07:25.083\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 2,\n                \"tweetPerSeconds\": 100\n            },\n            {\n                \"id\": \"6238f19a7a099c52463bd7ba\",\n                \"keyword\": \"Galatasaray\",\n                \"createDate\": \"2022-03-22T00:43:54.137\",\n                \"tweetSize\": 7,\n                \"durationInSeconds\": 30.0078192,\n                \"tweetPerSeconds\": 0.23327253318028524\n            },\n            {\n                \"id\": \"6238f1b47a099c52463bd7bb\",\n                \"keyword\": \"Galatasaray\",\n                \"createDate\": \"2022-03-22T00:44:20.97\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 200\n            },\n            {\n                \"id\": \"6238f830c0505f4b10d4a3f6\",\n                \"keyword\": \"Galatasaray\",\n                \"createDate\": \"2022-03-22T01:11:59.764\",\n                \"tweetSize\": 2,\n                \"durationInSeconds\": 30.0039948,\n                \"tweetPerSeconds\": 0.06665779051528165\n            },\n            {\n                \"id\": \"6238f9b49c8e1e5c6ffe092d\",\n                \"keyword\": \"Galatasaray\",\n                \"createDate\": \"2022-03-22T01:18:28.028\",\n                \"tweetSize\": 3,\n                \"durationInSeconds\": 30.0145294,\n                \"tweetPerSeconds\": 0.09995159211125262\n            },\n            {\n                \"id\": \"6238fb1bcfc04a56749e1a42\",\n                \"keyword\": \"Galatasaray\",\n                \"createDate\": \"2022-03-22T01:24:27.527\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 2,\n                \"tweetPerSeconds\": 100\n            },\n            {\n                \"id\": \"6238fe0f8ea88e66a6d1a797\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-22T01:37:03.744\",\n                \"tweetSize\": 11,\n                \"durationInSeconds\": 30.0059632,\n                \"tweetPerSeconds\": 0.3665937975955393\n            },\n            {\n                \"id\": \"623a37ab246af11f882189e5\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-22T23:55:07.976\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 200\n            },\n            {\n                \"id\": \"623a390c246af11f882189e6\",\n                \"keyword\": \"bieber\",\n                \"createDate\": \"2022-03-23T00:01:00.777\",\n                \"tweetSize\": 200,\n                \"durationInSeconds\": 1,\n                \"tweetPerSeconds\": 200\n            },\n            {\n                \"id\": \"623a3971a1c99935c2ed8657\",\n                \"keyword\": \"emrezorlu\",\n                \"createDate\": \"2022-03-23T00:02:41.211\",\n                \"tweetSize\": 0,\n                \"durationInSeconds\": 31,\n                \"tweetPerSeconds\": 0\n            },\n            {\n                \"id\": \"623a39e1711490206eb56173\",\n                \"keyword\": \"sytac\",\n                \"createDate\": \"2022-03-23T00:04:33.823\",\n                \"tweetSize\": 110,\n                \"durationInSeconds\": 3,\n                \"tweetPerSeconds\": 36\n            },\n            {\n                \"id\": \"623a3a75711490206eb56174\",\n                \"keyword\": \"galatasaray\",\n                \"createDate\": \"2022-03-23T00:07:01.254\",\n                \"tweetSize\": 15,\n                \"durationInSeconds\": 30.0024191,\n                \"tweetPerSeconds\": 0.4999596849175405\n            },\n            {\n                \"id\": \"623a3ad9711490206eb56175\",\n                \"keyword\": \"galatasaray\",\n                \"createDate\": \"2022-03-23T00:08:41.894\",\n                \"tweetSize\": 16,\n                \"durationInSeconds\": 30.0128643,\n                \"tweetPerSeconds\": 0.5331047326929073\n            }\n        ]\n    },\n    \"httpStatus\": \"OK\"\n}"
+				}
+			]
+		}
+	]
+}
