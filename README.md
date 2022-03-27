@@ -24,10 +24,10 @@
 
 
 + Connect to [Twitter Streaming API 1.1](https://developer.twitter.com/en/docs/twitter-api/v1/tweets/filter-realtime/overview)
-+ Filter messages that track on "bieber"
++ Filter messages that track on "bieber" or whatever keyword entered
 + Retrieve the incoming messages for 30 seconds or up to 100 messages, whichever comes first
-+ Your application should return the messages grouped by user (users sorted chronologically, ascending)
-+ The messages per user should also be sorted chronologically, ascending
++ the messages grouped by user (users sorted chronologically, ascending)
++ The messages per user sorted chronologically, ascending
 + For each message:
     * The message ID
     * The creation date of the message as epoch value
@@ -38,5 +38,4 @@
     * The creation date of the user as epoch value
     * The name of the user
     * The screen name of the user
-+ All the above information is provided in either Standard output, or a log file
-+ You are free to choose the output format, provided that it makes it easy to parse and process by a machine
++ All the above information is provided in Standard output.
