@@ -280,7 +280,7 @@ public class MessageServiceImpl implements MessageService {
 		}
 
 		Map<String, Long> occurrences = statisticList.stream()
-				.collect(Collectors.groupingBy(s -> s.getKeyword(), Collectors.counting()));
+				.collect(Collectors.groupingBy(StatisticEntity::getKeyword, Collectors.counting()));
 		response.setKeywordOccurrences(occurrences);
 
 		double averageTweetPerSeconds = statisticList.stream().mapToDouble(StatisticEntity::getTweetPerSeconds)
