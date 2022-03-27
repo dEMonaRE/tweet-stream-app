@@ -18,16 +18,20 @@
 + You are free to choose the output format, provided that it makes it easy to parse and process by a machine
 
 TECH STACK
-Java 11
-Spring Boot 2.6.3
-Spring Cloud Dependencies v2021
-JUnit 5
-Lombok+Mapper
-MongoDB
-Springdoc 1.6.6 due to dockletApi error of Swagger on spring 2.6.3 ➡️ http://localhost:8080/swagger-ui/index.html#/
-Docker ➡️ https://hub.docker.com/r/aemrezorlu/tweet-stream-app
+-Java 11
+-Spring Boot 2.6.4
+-Twitter4j https://github.com/Twitter4J/Twitter4J
+-JUnit 5
+-Lombok+Mapper
+-MongoDB
+-Springdoc  ➡️ http://localhost:8080/swagger-ui/index.html#/
+-Docker ➡️ https://hub.docker.com/r/aemrezorlu/tweet-stream-app
 
-  	docker pull aemrezorlu/tweet-stream-app:latest
+  -	docker pull aemrezorlu/tweet-stream-app:latest
 
-  	docker run -p 8080:8080 aemrezorlu/tweet-stream-app
-Postman 2.1 ➡️ /docs/tweet-stream-app.postman_collection.json
+  -	docker run -p 8080:8080 aemrezorlu/tweet-stream-app
+   
+   -  start with swagger-> startStream and listen or getTweets instantly
+   -  get stats with getSummary
+                     
+-Postman 2.1 ➡️ /docs/tweet-stream-app.postman_collection.json
