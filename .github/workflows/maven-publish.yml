@@ -1,4 +1,4 @@
-name: PipeLine - Maven Build Run Test Dockerize Push
+name: Build Run Test & Push DockerHub
 on:
   #Manually trigger workflow runs
   workflow_dispatch:
@@ -24,6 +24,12 @@ jobs:
         uses: actions/setup-java@v1
         with:
           java-version: '11'
+      - name: Cache SonarCloud packages
+        uses: actions/cache@v1
+        with:
+          path: ~/.sonar/cache
+          key: ${{ runner.os }}-sonar
+          restore-keys: ${{ runner.os }}-sonar    
       #Set up Maven cache
       - name: Cache Maven packages
         #This action allows caching dependencies and build outputs to improve workflow execution time.
@@ -32,6 +38,11 @@ jobs:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      - name: Sonar and analyze
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=dEMonaRE_tweet-stream-app    
      #clean install run tests
       - name: Build with Maven
         run: mvn clean install
