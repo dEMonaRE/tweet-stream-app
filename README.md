@@ -8,16 +8,7 @@
 + Retrieve the incoming messages for 30 seconds or up to 100 messages, whichever comes first
 + the messages grouped by user (users sorted chronologically, ascending)
 + The messages per user sorted chronologically, ascending
-+ For each message:
-    * The message ID
-    * The creation date of the message as epoch value
-    * The text of the message
-    * The author of the message
-+ For each author:
-    * The user ID
-    * The creation date of the user as epoch value
-    * The name of the user
-    * The screen name of the user
++ For each message & author info combined
 + All the above information is provided in console log as output.
 
 -----------------------------------------------------------------------------------------------------------
